@@ -16,12 +16,15 @@ public class World : MonoBehaviour
 
     private Chunk[,] chunks = new Chunk[VoxelData.WorldSizeInChunks, VoxelData.WorldSizeInChunks];
     private List<ChunkCoord> activeChunks = new List<ChunkCoord>();
-    private ChunkCoord playerChunkCoord;
+    
+    public ChunkCoord playerChunkCoord;
     private ChunkCoord playerLastChunkCoord;
 
     private List<ChunkCoord> chunksToCreate = new List<ChunkCoord>();
     private bool isCreatingChunks;
-    private void Start()
+
+    public GameObject debugScreen;
+    private void Awake()
     {
         Random.InitState(seed);
 
@@ -40,6 +43,9 @@ public class World : MonoBehaviour
 
         if (chunksToCreate.Count > 0 && !isCreatingChunks)
             StartCoroutine("CreateChunks");
+
+        if (Input.GetKeyDown(KeyCode.F3))
+            debugScreen.SetActive(!debugScreen.activeSelf);
     }
 
     private void GenerateWorld()
