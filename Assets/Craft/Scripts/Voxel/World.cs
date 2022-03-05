@@ -91,20 +91,25 @@ public class World : MonoBehaviour
 
     public byte GetVoxel(Vector3 pos)
     {
+        int yPos = Mathf.FloorToInt(pos.y);
+        
+
+        // If outside world, return air.
         if (!IsVoxelInWorld(pos))
             return 0;
-        if (pos.y < 1)
+
+        // If bottom block of chunk, return bedrock.
+        if (yPos == 0)
             return 1;
-        else if (pos.y == VoxelData.ChunkHeight - 1)
-        {
-            float tempNoise = Noise.Get2DPerlin(new Vector2(pos.x, pos.y), 0.21f, 0.4f);
-            if (tempNoise < 0.5f)
-                return 3;
-            else
-                return 4;
-        }
+
+        int terrainHeight = Mathf.FloorToInt(VoxelData.ChunkHeight * Noise.Get2DPerlin(new Vector2(pos.x, pos.z), 500.0f, 0.25f));
+        if (yPos == terrainHeight)
+            return 3;
+        else if (yPos > terrainHeight)
+            return 0;
         else
             return 2;
+       
     }
 
     private void CreateNewChunk(int x, int z)
