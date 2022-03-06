@@ -30,12 +30,12 @@ public class World : MonoBehaviour
 
         spawnPosition = new Vector3((VoxelData.WorldSizeInChunks * VoxelData.ChunkWidth) / 2.0f, VoxelData.ChunkHeight - 80.0f, (VoxelData.WorldSizeInChunks * VoxelData.ChunkWidth) / 2.0f);
         GenerateWorld();
-        playerLastChunkCoord = GetChunkFromVector3(player.position);
+        playerLastChunkCoord = GetChunkCoordFromVector3(player.position);
     }
 
     private void Update()
     {
-        playerChunkCoord = GetChunkFromVector3(player.position);
+        playerChunkCoord = GetChunkCoordFromVector3(player.position);
 
         
         if(!playerChunkCoord.Equals(playerLastChunkCoord))
@@ -77,7 +77,7 @@ public class World : MonoBehaviour
         isCreatingChunks = false;
     }
 
-    private ChunkCoord GetChunkFromVector3(Vector3 pos)
+    private ChunkCoord GetChunkCoordFromVector3(Vector3 pos)
     {
         int x = Mathf.FloorToInt(pos.x / VoxelData.ChunkWidth);
         int z = Mathf.FloorToInt(pos.z / VoxelData.ChunkWidth);
@@ -85,9 +85,17 @@ public class World : MonoBehaviour
         return new ChunkCoord(x, z);
     }
 
+    public Chunk GetChunkFromVector3(Vector3 pos)
+    {
+        int x = Mathf.FloorToInt(pos.x / VoxelData.ChunkWidth);
+        int z = Mathf.FloorToInt(pos.z / VoxelData.ChunkWidth);
+
+        return chunks[x,z];
+    }
+
     private void CheckViewDistance()
     {
-        ChunkCoord coord = GetChunkFromVector3(player.position);
+        ChunkCoord coord = GetChunkCoordFromVector3(player.position);
         playerLastChunkCoord = playerChunkCoord;
 
         List<ChunkCoord> previoslyActiveChunks = new List<ChunkCoord>(activeChunks);
