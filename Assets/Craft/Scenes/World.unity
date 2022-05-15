@@ -2465,6 +2465,7 @@ MonoBehaviour:
     - Broads
     - Brick
     - Glass
+    - HalfStone
   inventorySlotPrefab: {fileID: 5629564177805762534, guid: d1adee0940677b94bb6961c78dd7a49b, type: 3}
   inventoryContent: {fileID: 586690877}
   headerText: {fileID: 1041999582}
@@ -3231,7 +3232,7 @@ MonoBehaviour:
     viewDistance: 3
     loadDistance: 5
     enableThreading: 1
-    clouds: 2
+    clouds: 0
     mouseSensitivity: 2
   biome: {fileID: 11400000, guid: 1202471cc0a875a4f9081e2d574567af, type: 2}
   globalLightLevel: 1
@@ -3246,7 +3247,7 @@ MonoBehaviour:
     isSolid: 0
     renderNeighborFaces: 1
     opacity: 0
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 0}
     backFaceTexture: 0
     frontFaceTexture: 0
@@ -3258,7 +3259,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: -6931339683150358059, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 9
     frontFaceTexture: 9
@@ -3270,7 +3271,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 2514988542215765323, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 0
     frontFaceTexture: 0
@@ -3282,7 +3283,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 2130535880278150251, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 2
     frontFaceTexture: 2
@@ -3294,7 +3295,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 3434086634727231013, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 10
     frontFaceTexture: 10
@@ -3306,7 +3307,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 184950751378207249, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 1
     frontFaceTexture: 1
@@ -3318,7 +3319,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: -2319476694228375547, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 5
     frontFaceTexture: 5
@@ -3330,7 +3331,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 5543941588292853863, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 4
     frontFaceTexture: 4
@@ -3342,7 +3343,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 4321908322816216039, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 11
     frontFaceTexture: 11
@@ -3354,7 +3355,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 0
     opacity: 15
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: 1202984965197363600, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 8
     frontFaceTexture: 8
@@ -3366,7 +3367,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 1
     opacity: 3
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: -7899933087549869777, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 3
     frontFaceTexture: 3
@@ -3378,7 +3379,7 @@ MonoBehaviour:
     isSolid: 1
     renderNeighborFaces: 1
     opacity: 5
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: -168777754515822616, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 16
     frontFaceTexture: 16
@@ -3386,11 +3387,23 @@ MonoBehaviour:
     bottomFaceTexture: 16
     leftFaceTexture: 16
     rightFaceTexture: 16
+  - blockName: HalfStone
+    isSolid: 1
+    renderNeighborFaces: 1
+    opacity: 15
+    voxelMesh: {fileID: 11400000, guid: 5b78debaa56bcd94594833eef6c1f756, type: 2}
+    icon: {fileID: 3929133199111790865, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
+    backFaceTexture: 0
+    frontFaceTexture: 0
+    topFaceTexture: 0
+    bottomFaceTexture: 0
+    leftFaceTexture: 0
+    rightFaceTexture: 0
   - blockName: Water
     isSolid: 1
     renderNeighborFaces: 1
     opacity: 3
-    voxelMesh: {fileID: 0}
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
     icon: {fileID: -168777754515822616, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 0
     frontFaceTexture: 0
