@@ -2459,6 +2459,8 @@ MonoBehaviour:
     - Bedrock
     - Stone
     - Grass
+    - Cactus
+    - Water
   - nameOfType: Base2
     namesOfBlocks:
     - Wood
@@ -3231,8 +3233,8 @@ MonoBehaviour:
     version: 0.0.1
     viewDistance: 3
     loadDistance: 5
-    enableThreading: 1
-    clouds: 0
+    enableThreading: 0
+    clouds: 2
     mouseSensitivity: 2
   biome: {fileID: 11400000, guid: 1202471cc0a875a4f9081e2d574567af, type: 2}
   globalLightLevel: 1
@@ -3242,9 +3244,11 @@ MonoBehaviour:
   spawnPosition: {x: 0, y: 0, z: 0}
   material: {fileID: 2100000, guid: 6383e1b119333d44a8024a8ddf064999, type: 2}
   transparentMaterial: {fileID: 2100000, guid: b29a6ea739e7fa14f8ac0c655b5c0e06, type: 2}
+  waterMaterial: {fileID: 2100000, guid: 4848a16d6b0947d4c9a051819d4edc66, type: 2}
   blockTypes:
   - blockName: 
     isSolid: 0
+    isWater: 0
     renderNeighborFaces: 1
     opacity: 0
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3257,6 +3261,7 @@ MonoBehaviour:
     rightFaceTexture: 0
   - blockName: Bedrock
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3269,6 +3274,7 @@ MonoBehaviour:
     rightFaceTexture: 9
   - blockName: Stone
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3281,6 +3287,7 @@ MonoBehaviour:
     rightFaceTexture: 0
   - blockName: Grass
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3293,6 +3300,7 @@ MonoBehaviour:
     rightFaceTexture: 2
   - blockName: Sand
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3305,6 +3313,7 @@ MonoBehaviour:
     rightFaceTexture: 10
   - blockName: Dirt
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3317,6 +3326,7 @@ MonoBehaviour:
     rightFaceTexture: 1
   - blockName: Wood
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3329,6 +3339,7 @@ MonoBehaviour:
     rightFaceTexture: 5
   - blockName: Broads
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3341,6 +3352,7 @@ MonoBehaviour:
     rightFaceTexture: 4
   - blockName: Brick
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3353,6 +3365,7 @@ MonoBehaviour:
     rightFaceTexture: 11
   - blockName: Cubblestone
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 0
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3365,6 +3378,7 @@ MonoBehaviour:
     rightFaceTexture: 8
   - blockName: Glass
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 1
     opacity: 3
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3377,6 +3391,7 @@ MonoBehaviour:
     rightFaceTexture: 3
   - blockName: Leaves
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 1
     opacity: 5
     voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
@@ -3389,6 +3404,7 @@ MonoBehaviour:
     rightFaceTexture: 16
   - blockName: HalfStone
     isSolid: 1
+    isWater: 0
     renderNeighborFaces: 1
     opacity: 15
     voxelMesh: {fileID: 11400000, guid: 5b78debaa56bcd94594833eef6c1f756, type: 2}
@@ -3401,16 +3417,30 @@ MonoBehaviour:
     rightFaceTexture: 0
   - blockName: Water
     isSolid: 1
+    isWater: 1
     renderNeighborFaces: 1
     opacity: 3
-    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
-    icon: {fileID: -168777754515822616, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
+    voxelMesh: {fileID: 11400000, guid: f2ba3e10b36fe4e42b5456681c01a074, type: 2}
+    icon: {fileID: 6677730196063026099, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
     backFaceTexture: 0
     frontFaceTexture: 0
     topFaceTexture: 0
     bottomFaceTexture: 0
     leftFaceTexture: 0
     rightFaceTexture: 0
+  - blockName: Cactus
+    isSolid: 1
+    isWater: 0
+    renderNeighborFaces: 0
+    opacity: 3
+    voxelMesh: {fileID: 11400000, guid: c3c16ecc41f3e7f4baa122ce313a7643, type: 2}
+    icon: {fileID: 4947747515796799012, guid: 80398ba08daec36498b6c6bd4108c024, type: 3}
+    backFaceTexture: 18
+    frontFaceTexture: 18
+    topFaceTexture: 17
+    bottomFaceTexture: 17
+    leftFaceTexture: 18
+    rightFaceTexture: 18
   blockNames: []
   debugScreen: {fileID: 1304391765}
   worldData:

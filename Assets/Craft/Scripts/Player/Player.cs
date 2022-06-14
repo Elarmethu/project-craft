@@ -186,6 +186,9 @@ public class Player : MonoBehaviour
 
     private bool PlaceInputBlocks()
     {
+        if (rightFingerID == -1)
+            return false;
+
         float step = checkIncrement;
         Vector3 lastPos = new Vector3();
 

@@ -19,6 +19,7 @@ public class World : MonoBehaviour {
 
     public Material material;
     public Material transparentMaterial;
+    public Material waterMaterial;
 
     public BlockType[] blockTypes;
     public List<string> blockNames;
@@ -316,7 +317,12 @@ public class World : MonoBehaviour {
         else if (yPos < terrainHeight && yPos > terrainHeight - 4)
             voxelValue = 5;
         else if (yPos > terrainHeight)
-            return 0;
+        {
+            if (yPos < 50) // Or any water level.
+                voxelValue = 13; // Water code
+            else
+                voxelValue = 0;
+        }
         else
             voxelValue = 2;
 
@@ -333,7 +339,7 @@ public class World : MonoBehaviour {
 
         // Tree pass
 
-        if (yPos == terrainHeight)
+        if (yPos == terrainHeight && yPos > 50)
         {
             if (Noise.Get2DPerlin(new Vector2(pos.x, pos.z), 0, biome.treeZoneScale) < biome.treeZoneThreshold)
             {
@@ -384,10 +390,11 @@ public class BlockType {
 
     public string blockName;
     public bool isSolid;
+    public bool isWater;
     public bool renderNeighborFaces;
     public byte opacity;
     public VoxelMeshData voxelMesh;
-    public Sprite icon;
+    public Sprite icon;   
 
     [Header("Texture Values")]
     public int backFaceTexture;

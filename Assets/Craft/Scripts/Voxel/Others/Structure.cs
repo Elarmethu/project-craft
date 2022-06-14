@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public static class Structure
 {
-    public static Queue<VoxelMod> MakeTree(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
+   public static Queue<VoxelMod> MakeTree(Vector3 position, int minTrunkHeight, int maxTrunkHeight)
     {
 
         Queue<VoxelMod> queue = new Queue<VoxelMod>();
@@ -43,5 +43,5 @@ public static class Structure
         }
 
         return queue;
-    }
+    } 
 }
