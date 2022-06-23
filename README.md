@@ -16,3 +16,5 @@ The project is a procedurally generated game, with the ability to build/break a 
 - Convenient addition of new blocks and generation types.
 - It is possible to create "buildings" during generation.
 
+### controlls demonstration
+![ezgif-4-331b64a52f](https://user-images.githubusercontent.com/71877759/175297458-b80729b0-242f-4da8-b3af-74596cbdc7ee.gif)
